@@ -63,7 +63,7 @@
 								<span class="form-label">Select a course</span>
 								<div class="form-group">
 									<select class="form-control courses" id="courses" required>
-										<option	 selected disabled>Course</option>
+										<option	 selected disabled>	</option>
 										<option value="one" id="">Communication Skills</option>
 										<option value="two" id="">African Studies</option>
 										<option value="three" id="">Information Technology Skills</option>
@@ -100,6 +100,7 @@
 										<option value="ANNAN PAINTSIL FRANK">ANNAN PAINTSIL FRANK</option>
 										<option value="NAA AMELEY ARMAH">NAA AMELEY ARMAH</option>
 									</select>
+									<span class="select-arrow"></span>
 								</div>
 
 								<div id="two1" class="const hidden">
@@ -110,6 +111,7 @@
 										<option value="BENJAMIN QUAINOO">BENJAMIN QUAINOO</option>
 										<option value="CLIFFORD DONKOR">CLIFFORD DONKOR</option>
 									</select>
+									<span class="select-arrow"></span>
 								</div>
 
 								<div id="three1" class="const hidden">
@@ -117,6 +119,7 @@
 										<option value="BAWUAH DERRICK AGYEMANG">BAWUAH DERRICK AGYEMANG</option>
 										<option value="PRINCE BLANKSON">PRINCE BLANKSON</option>
 									</select>
+									<span class="select-arrow"></span>
 								</div>
 
 								<div id="four1" class="const hidden">
@@ -126,6 +129,7 @@
 										<option value="DORCAS ARABA ACHEAMPONG">DORCAS ARABA ACHEAMPONG</option>
 										<option value="PEARL ELESI AGGOR">PEARL ELESI AGGOR</option>
 									</select>
+									<span class="select-arrow"></span>
 								</div>
 
 								<div id="five1" class="const hidden">
@@ -136,6 +140,7 @@
 										<option value="JESSICA OBIRI AMABEA">JESSICA OBIRI AMABEA</option>
 										<option value="BAAH RHODA AKUA BAAHWA">BAAH RHODA AKUA BAAHWA</option>
 									</select>
+									<span class="select-arrow"></span>
 								</div>
 
 								<div id="six1" class="const hidden">
@@ -144,6 +149,7 @@
 										<option value="ANSAH MICHAEL KWAKU">ANSAH MICHAEL KWAKU</option>
 										<option value="FAIZATU MOHAMMED AWAL">FAIZATU MOHAMMED AWAL</option>
 									</select>
+									<span class="select-arrow"></span>
 								</div>
 
 								<div id="seven1" class="const hidden">
@@ -153,6 +159,7 @@
 										<option value="CALEB NII AYI QUAYE">CALEB NII AYI QUAYE</option>
 										<option value="EMMANUEL KUMAH">EMMANUEL KUMAH</option>
 									</select>
+									<span class="select-arrow"></span>
 								</div>
 
 								<div id="eight1" class="const hidden">
@@ -163,6 +170,7 @@
 										<option value="EBENEZER KOOMSON">EBENEZER KOOMSON</option>
 										<option value="EMEFA DARKE">EMEFA DARKE</option>
 									</select>
+									<span class="select-arrow"></span>
 								</div>
 
 								<div id="nine1" class="const hidden">
@@ -173,6 +181,7 @@
 										<option value="KWABENA ADUBOFOUR">KWABENA ADUBOFOUR</option>
 										<option value="ADUTWUM DUNAMIS">ADUTWUM DUNAMIS</option>			
 									</select>
+									<span class="select-arrow"></span>
 								</div>
 
 								<div id="ten1" class="const hidden">
@@ -182,6 +191,7 @@
 										<option value="FOSU MACLEAN">FOSU MACLEAN</option>
 										<option value="LESLEY JONES APPIAH">LESLEY JONES APPIAH</option>
 									</select>
+									<span class="select-arrow"></span>
 								</div>
 
 								<div id="eleven1" class="const hidden">
@@ -190,6 +200,7 @@
 										<option value="ELLEN NORTEY YEBOAH KOOMSON">ELLEN NORTEY YEBOAH KOOMSON</option>
 										<option value="APPIAH DARKWAH SIMON">APPIAH DARKWAH SIMON</option>
 									</select>
+									<span class="select-arrow"></span>
 								</div>
 
 								<div id="twelve1" class="const hidden">
@@ -200,6 +211,7 @@
 										<option value="PEARL ELESI AGGOR">PEARL ELESI AGGOR</option>
 										<option value="DEREK ODURO JUNIOR">DEREK ODURO JUNIOR</option>
 									</select>
+									<span class="select-arrow"></span>
 								</div>
 							</div>
 
@@ -207,21 +219,22 @@
 								<div class="col-sm-7">
 									<div class="form-group">
 										<span class="form-label">Choose a Weekday</span>
-										<select class="form-control">
-											<option selected disabled>Day</option>
+										<select class="form-control" id="e">
+											<option selected disabled></option>
 											<option>Monday</option>
 											<option>Wednesday</option>
 											<option>Friday</option>
 											<option>Saturday</option>
 										</select>
+										<span class="select-arrow"></span>
 									</div>
 								</div>
 								<div>
 									<div class="col-sm-5">
 										<div class="form-group">
 											<span class="form-label">Select an available time slot</span>
-											<select class="form-control">
-												<option selected disabled>Time</option>
+											<select class="form-control" id="f">
+												<option selected disabled></option>
 												<option>13:00 GMT</option>
 												<option>15:00 GMT</option>
 												<option>17:00 GMT</option>
@@ -232,7 +245,7 @@
 								</div>
 							</div>
 							<div class="form-btn">
-								<button id="status" class="submit-btn">Book Now</button>
+								<button id="status" type="button" class="submit-btn">Book Now</button>
 							</div>
 						</form>
 					</div>
@@ -246,7 +259,7 @@
 	
 	<script type="text/javascript">
 		var status = document.getElementById("status").addEventListener("click", function () {
-			if((document.getElementById("a").value.length == 0) || (document.getElementById("b").value.length == 0) || (document.getElementById("d").value == "")){
+			if((document.getElementById("a").value == "") || (document.getElementById("b").value.length == 0) || (document.getElementById("courses").value.length == 0) || (document.getElementById("e").value.length == 0) || (document.getElementById("f").value.length == 0)){
 				alert("Fill the required spaces");
 			}
 			else {
